@@ -110,6 +110,43 @@ console.log(document.documentElement.parentNode) //return document because docum
 console.log(document.body.firstChild)//return first child can be node(text, comment etc.) and element 
 console.log(document.body.firstElementChild)//return first element only will ignore nodes
 
+//searching dom
+//document.getElementById() // search element from gived id
+//document.getElementsByClassName() // search elements from given class name...multiple class names can be provided using space
+//document.getElementsByTagName() // return elements with given tag name
+//document.getElementsByName() // return elements with given name attribute
+
+//matches, contains, colsest
+//element.matches(css) = to check if element matches given css selector
+//element.closest(css) = to look for the nearest ancestor that matches the given css-selector. the element itself is also checked
+//elemA.contains(elemB) = Returns true if elemB is inside elemA (a descendent of elemA) or when elemA == elemB
+let id1 = document.getElementById("id1");
+console.log(id1.matches(".class"));//returns false because it's checking .class of classname
+console.log(id1.matches(".box")); // returns true because elements class name is box
+let sp1 = document.getElementById("sp1");
+console.log(sp1.closest(".box"));//will return div because closest div with class box is closest
+console.log(sp1.closest("#sp1"));//will return self because sp1 id matches with self
+//. is used for class and # is used for id
+console.log(id1.contains(sp1));//return true because sp1 is child of id1
+
+let id2 = document.getElementById("id2");
+console.log(id2.contains(sp1));//return false because sp1 id not there
+
+
+console.dir(sp1); //dir shows elements as a object with it's properties
+//inner html property returns html inside the element as a string, will valid only for elements
+//outer html property return html inside the element as well element itself also
+
+//Attribute methods
+//hasAttribute - to check existence of an attribute
+//getAttribute - to get value of an attribute
+//setAtrribute(attribute , value) - to set attribute
+//removeAtrribute - to remove atrribute of an element
+//data-attributes is used to create custom attributes
+//dataset is used to get custom atrributes
+
+
+
 
 
 
