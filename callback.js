@@ -89,3 +89,5 @@ cp.then(value => {
 //promise.any //will return first completed promise with resloved only will ignore rejected
 //promise.resolve
 //promise.reject
+
+
