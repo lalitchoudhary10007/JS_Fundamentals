@@ -1,0 +1,15 @@
+#demo {
+    /* (A1) REMOVE BULLETS & IDENTATION */
+    list-style: none;
+    padding: 0; margin: 0;
+  
+    /* (A2) LIST VIEW - 1 ITEM PER ROW */
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  #demo li {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  #demo li:nth-child(odd) { background: #f7f7f7; }
