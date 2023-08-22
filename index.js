@@ -155,7 +155,43 @@ div.innerHTML = `
 <input type="button" value="-" onclick="removeRow(this)" />
 `;
 ap.appendChild(div);
+//insertion
 
+let insertIn = document.getElementsByClassName('ex_insertion')[0];
+console.log(a);
+let div = document.createElement('div');
+div.innerHTML = '<h1>hello h1 inserstion</h1>';
+//insertIn.appendChild(div);
+//insertIn.prepend(div);
+//insertIn.before(div);
+//insertIn.after(div);
+
+insertIn.insertAdjacentHTML('beforebegin', '<div class="test">beforebegin</div>')
+insertIn.insertAdjacentHTML('afterbegin', '<div class="test">afterbegin</div>')
+insertIn.insertAdjacentHTML('beforeend', '<div class="test">beforeend</div>')
+insertIn.insertAdjacentHTML('afterend', '<div class="test">afterend</div>')
+
+//change classes of element
+//element.className and classList can be used to change class names of any element
+
+let timeout = setTimeout(function(){
+    alert("I will execute after time out")
+}, 3000);
+clearTimeout(timeout);
+
+let interval = setInterval(function(){
+    alert("I will execute again and again with the interval of given time")
+}, 2000);
+clearInterval(interval);
+
+let btn = document.getElementsByClassName('btn event')[0];
+// btn.onclick  = () => {
+//     alert("Hi Button")
+// }
+btn.addEventListener('click', function(e) {
+    console.log(e.type);
+    alert('Hi Button');
+}) 
 
 
 
